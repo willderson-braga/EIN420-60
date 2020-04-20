@@ -1,0 +1,20 @@
+grupolista = list()
+grupo = dict()
+soma = média = altura = 0
+for cont in range (2):
+    grupo.clear()
+    grupo['cpf'] = str(input('CPF:  '))
+    grupo['nome'] = str(input('Nome :'))
+    grupo['altura'] = float(input('Altura :'))
+    grupo['idade'] = int(input ('Idade  :'))
+    soma += grupo['idade']
+    soma += grupo['altura']
+    grupolista.append(grupo.copy())
+    
+print('-=' *30)
+print(f'Foram cadastradas {len(grupolista)}   pessoas: ')
+média = soma / len(grupolista)
+print(' A média das idades é de : {:.2f} anos' .format(média))
+#print(f' A média das idades é {média:5.2f} anos.')
+print(grupo)
+print(grupolista)
